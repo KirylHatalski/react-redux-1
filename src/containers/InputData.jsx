@@ -1,13 +1,24 @@
 import React, {PropTypes} from 'react'
-import Patterns from '../components/Patterns';
+import Input from '../components/Input';
+import {connect} from 'react-redux'
 
-const InputData = (props) => {
-    return (
-        <div>
-            <input type='number' value='' placeholder='input number'/>
-            <Patterns/>
-        </div>
-    )
+import { changeInput } from '../actions';
+
+
+function mapStateToProps(state) {
+    return {
+      // state: state
+    }
 }
 
-export default InputData
+function mapDispatchToProps(dispatch) {
+    return {
+        changeInput: (el) => {
+          dispatch(changeInput(el.target.value))
+        }
+    }
+}
+
+const InputData = connect(mapStateToProps, mapDispatchToProps)(Input);
+
+export default InputData;

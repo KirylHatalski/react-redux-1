@@ -1,12 +1,13 @@
 import React, {PropTypes} from 'react'
-import {connect} from 'react-redux';
+import PatternsData from '../containers/ToPatternsData'
 
-import OutputData from '../containers/OutputData';
 
-class Output extends React.Component {
-    render() {
-        return (<OutputData/>)
-    }
-}
+const Output = ({output}) => {
+  return (
+          <div>
+            {output}
+            <PatternsData/>
+          </div>
+        )}
 
-export default connect()(Output);
+export default Output;

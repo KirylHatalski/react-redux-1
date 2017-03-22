@@ -1,15 +1,29 @@
 export const ALIVE = 'ALIVE';
-export const PATTERN_CHANGED = 'PATTERN_CHANGED';
+export const FROM_PATTERN_CHANGED = 'FROM_PATTERN_CHANGED';
+export const TO_PATTERN_CHANGED = 'TO_PATTERN_CHANGED';
+export const CHANGE_INPUT = 'CHANGE_INPUT';
 
 export const throwClick = () => {
-    return {type: ALIVE, payload: 'piy'}
+    return {type: ALIVE, payload: {started:'piy'}}
 }
 
-export const changePattern = (pattern) => {
+export const changeFromPattern = (pattern) => {
     return {
-        type: PATTERN_CHANGED,
-        payload: {
-            pattern: pattern
-        }
+        type: FROM_PATTERN_CHANGED,
+        payload: pattern
     }
+}
+
+export const changeToPattern = (pattern) => {
+    return {
+        type: TO_PATTERN_CHANGED,
+        payload: pattern
+    }
+}
+
+export const changeInput = (value) => {
+  return {
+    type: CHANGE_INPUT,
+    payload: value
+  }
 }

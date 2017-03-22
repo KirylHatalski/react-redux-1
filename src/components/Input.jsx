@@ -2,11 +2,14 @@ import React, {PropTypes} from 'react'
 import {connect} from 'react-redux';
 
 import InputData from '../containers/InputData';
+import PatternsData from '../containers/FromPatternsData'
 
-class Input extends React.Component {
-    render() {
-        return (<InputData/>)
-    }
-}
+const Input = ({changeInput}) => (
+  <div>
+      <input type='number' onChange={changeInput}/>
 
-export default connect()(Input);
+      <PatternsData/>
+  </div>
+)
+
+export default Input;

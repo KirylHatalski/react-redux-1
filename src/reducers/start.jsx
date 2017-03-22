@@ -3,15 +3,15 @@ const start = (state = [], action) => {
         case 'ALIVE':
             return [
                 ...state,
-                checker()
+                checker(action.payload.started)
             ]
         default:
             return state
     }
 }
 
-function checker() {
-    console.log('piy');
+function checker(action) {
+    console.log(action);
 }
 
 export default start

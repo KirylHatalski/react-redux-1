@@ -1,11 +1,19 @@
 import React, {PropTypes} from 'react'
+import {connect} from 'react-redux'
+import Output from '../components/Output';
 
-const OutputData = (props) => {
-    return (
-        <div>
-            result
-        </div>
-    )
+function mapStateToProps(state) {
+  return {
+    output: state.convertor.output
+  }
 }
 
-export default OutputData
+function mapDispatchToProps(dispatch) {
+  return {
+
+  }
+}
+
+const OutputData = connect(mapStateToProps, mapDispatchToProps)(Output);
+
+export default OutputData;
