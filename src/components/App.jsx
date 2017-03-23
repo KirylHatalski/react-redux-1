@@ -1,3 +1,4 @@
+
 import React, {PropTypes} from 'react'
 import {connect} from 'react-redux';
 import InputData from '../containers/InputData';
@@ -6,9 +7,14 @@ import OutputData from '../containers/OutputData';
 class App extends React.Component {
     render() {
         return (
-            <div>
+            <div className='container'>
+              <div className='input'>
                 <InputData/>
-                <OutputData/>
+              </div>
+              <span className='compare'>===</span>
+              <div className='output'>
+                  <OutputData/>
+              </div>
             </div>
         )
     }

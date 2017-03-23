@@ -2,3 +2,17 @@ body,
 html {
   height: 100%;
 }
+.container {
+  margin: 0 auto;
+  width: 1240px;
+  text-align: center;
+}
+.container .input,
+.container .output {
+  display: inline-block;
+}
+.container-value {
+  height: 50px;
+  border: 1px solid #3c3c3c;
+  min-width: 35px;
+}

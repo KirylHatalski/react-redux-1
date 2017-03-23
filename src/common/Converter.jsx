@@ -1,5 +1,5 @@
-const Converter = () => {
-
+const convert = (input, fro, to) => {
+  return input * fro / to;
 }
 
-export default Converter;
+export default convert;

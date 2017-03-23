@@ -5,7 +5,8 @@ import PatternsData from '../containers/ToPatternsData'
 const Output = ({output}) => {
   return (
           <div>
-            {output}
+            <span className='output-value'>{output}</span>
+
             <PatternsData/>
           </div>
         )}

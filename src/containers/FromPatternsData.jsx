@@ -6,7 +6,7 @@ import {changeFromPattern} from '../actions';
 
 function mapStateToProps(state) {
   return {
-    pattern: 1000
+    pattern: 1
   }
 }
 
