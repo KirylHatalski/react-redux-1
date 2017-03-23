@@ -3,15 +3,11 @@ import {connect} from 'react-redux'
 import Output from '../components/Output';
 
 function mapStateToProps(state) {
-  return {
-    output: state.convertor.output
-  }
+    return {output: state.convertor.output}
 }
 
 function mapDispatchToProps(dispatch) {
-  return {
-
-  }
+    return {}
 }
 
 const OutputData = connect(mapStateToProps, mapDispatchToProps)(Output);

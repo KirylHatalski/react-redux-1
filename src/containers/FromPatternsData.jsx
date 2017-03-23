@@ -5,17 +5,15 @@ import Patterns from '../components/Patterns';
 import {changeFromPattern} from '../actions';
 
 function mapStateToProps(state) {
-  return {
-    pattern: 1
-  }
+    return {pattern: 1}
 }
 
 function mapDispatchToProps(dispatch) {
-  return {
-    changePattern: (el) => {
-      dispatch(changeFromPattern(+el.target.value))
+    return {
+        changePattern: (el) => {
+            dispatch(changeFromPattern(+ el.target.value))
+        }
     }
-  }
 }
 
 const PatternsData = connect(mapStateToProps, mapDispatchToProps)(Patterns);
