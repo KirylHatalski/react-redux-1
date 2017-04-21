@@ -2,17 +2,86 @@ body,
 html {
   height: 100%;
 }
-.container {
+.wrapper {
+  display: block;
+  width: 1160px;
   margin: 0 auto;
+}
+.container {
   width: 1240px;
   text-align: center;
 }
 .container .input,
 .container .output {
   display: inline-block;
+  vertical-align: middle;
 }
-.container-value {
+.container .input:before,
+.container .output:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.container .input .pattern,
+.container .output .pattern,
+.container .input-value,
+.container .output-value {
+  display: inline-block;
   height: 50px;
   border: 1px solid #3c3c3c;
   min-width: 35px;
+  vertical-align: middle;
+  box-sizing: border-box;
+  margin-right: 5px;
+  font-size: 2.5em;
+}
+.container .input .pattern input,
+.container .output .pattern input,
+.container .input-value input,
+.container .output-value input {
+  display: block;
+  height: 96%;
+  outline: none;
+  border: none;
+  font-size: 1em;
+  width: 250px;
+}
+.container .input .output-value,
+.container .output .output-value {
+  padding: 0 5px;
+}
+.container .history {
+  margin-top: 25px;
+  text-align: left;
+}
+.compare {
+  font-size: 2.5em;
+  vertical-align: bottom;
+  padding: 0 5px;
+}
+.tabs {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  border-bottom: 1px solid #3c3c3c;
+  box-sizing: border-box;
+}
+.tabs .active {
+  border: 1px solid #3c3c3c;
+  border-bottom: 1px solid #fff;
+}
+.tabs .tab {
+  display: inline-block;
+  height: 30px;
+  min-width: 25%;
+  text-align: center;
+  box-sizing: border-box;
+  margin-bottom: -1px;
+  text-decoration: none;
+  font-size: 1.5em;
+  color: #000;
+}
+.tabs .tab * {
+  vertical-align: middle;
 }

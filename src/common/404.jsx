@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 
-export default class NotFound extends Component {
-    render() {
-        return (
-            <h2>NOT FOUND! 404</h2>
-        );
-    }
-}
+
+const NotFound = () => (
+    <h2>NOT FOUND! 404</h2>
+);
+export default connect()(NotFound)

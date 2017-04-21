@@ -7,7 +7,7 @@ import PatternsData from '../containers/FromPatternsData'
 const Input = ({changeInput}) => (
     <div>
         <div className='input-value'>
-            <input type='number' onChange={changeInput} size='5'/>
+            <input type='number' onChange={changeInput} size='5' placeholder='type here'/>
         </div>
 
         <PatternsData/>

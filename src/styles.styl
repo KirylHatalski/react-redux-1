@@ -1,14 +1,17 @@
 body
 html
   height 100%
-
-
+  // background rgba(1, 6, 13, 0.3)
+.wrapper
+  display block
+  width 1160px
+  margin 0 auto
 
 .container
-  margin 25% auto 0
+  // margin 25% auto 0
   width 1240px
   text-align center
-  transform translateY(-50%)
+  // transform translateY(-50%)
 
   .input
   .output
@@ -43,7 +46,38 @@ html
       .output-value
         padding 0 5px
 
+  .history
+    margin-top 25px
+    text-align left
+
 .compare
   font-size 2.5em
   vertical-align bottom
   padding 0 5px
+
+
+.tabs
+  display flex
+  margin 0 auto
+  justify-content space-between
+  border-bottom 1px solid #3c3c3c
+  box-sizing border-box
+  // text-align justify
+
+  .active
+    border 1px solid #3c3c3c
+    border-bottom 1px solid #fff
+
+  .tab
+    display inline-block
+    height 30px
+    min-width 25%
+    text-align center
+    box-sizing border-box
+    margin-bottom -1px
+    text-decoration none
+    font-size 1.5  em
+    color #000
+
+    & *
+      vertical-align middle
